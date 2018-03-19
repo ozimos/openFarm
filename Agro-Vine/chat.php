@@ -59,10 +59,13 @@
           <a class="nav-link" href="#">Storage Facilities</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-4" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-      </form>
+      <div class="input-group ">
+        <input class="form-control" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
+
+        <div class="input-group-append">
+    <span class="input-group-text btn btn-outline-light" id="basic-addon2"><i class="fas fa-search"></i></span>
+  </div>
+      </div>
     </div>
   </nav>
   <div class="container-fluid">
@@ -76,12 +79,10 @@
         <div class="container">
           <div id="subheader" class="row">
             <div class="col-md-5">
-              <div class="form-group has-feedback has-search">
-
+              <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for a farmer or farm produce">
-                <span class="glyphicon glyphicon-search form-control-feedback"><i class="fas fa-search"></i></span>
                 <div class="input-group-append">
-    <span class="input-group-text" id="basic-addon2">@example.com</span>
+    <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
   </div>
               </div>
             </div>
