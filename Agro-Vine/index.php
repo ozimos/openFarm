@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="img/agrovine.png" id="logo" alt="Open Farm Logo">
+                <img src="img/OpenFarm.svg" id="logo" alt="Open Farm Logo">
             </div>
             <div class="col-md-3">
                 11, Elekahia Road, Port Harcourt
@@ -64,6 +64,21 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <img style="height: 12rem;" src="img/serious.jpg" alt="Card image cap">
+  </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <img style="height: 12rem;" src="img/serious.jpg" alt="Card image cap">
+  </div>
+    </div><div class="col-sm-3">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
