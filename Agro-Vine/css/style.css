@@ -31,3 +31,17 @@ body{
 #view1 li{
     display: inline;
 }
+#profileEditor{
+    display: flex;
+}
+#subheader ul{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    min-width: 3em;
+    text-align: center;
+}
+.btn-outline-white {
+    border: none;
+}

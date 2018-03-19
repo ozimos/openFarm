@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -58,8 +60,8 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-4" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
   </nav>
@@ -68,26 +70,26 @@
       <div class="carousel-item active">
         <img class="d-block w-100 img-fluid" src="img/farmwork-crop.jpg" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-            <h5>Connecting with Farmers,</h5>
-            <h5>Funding and Markets</h5>
-            <p>With over 10 years of experience helping</p>
-          </div>
+          <h5>Connecting with Farmers,</h5>
+          <h5>Funding and Markets</h5>
+          <p>With over 10 years of experience helping</p>
+        </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100 img-fluid" src="img/plentycrop.jpg" alt="Second slide">
         <div class="carousel-caption d-none d-md-block">
-            <h5>Connecting with Farmers,</h5>
-            <h5>Funding and Markets</h5>
-            <p>With over 10 years of experience helping</p>
-          </div>
+          <h5>Connecting with Farmers,</h5>
+          <h5>Funding and Markets</h5>
+          <p>With over 10 years of experience helping</p>
+        </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100 img-fluid" src="img/rowscrop.jpg" alt="Third slide">
         <div class="carousel-caption d-none d-md-block">
-            <h5>Connecting with Farmers,</h5>
-            <h5>Funding and Markets</h5>
-            <p>With over 10 years of experience helping</p>
-          </div>
+          <h5>Connecting with Farmers,</h5>
+          <h5>Funding and Markets</h5>
+          <p>With over 10 years of experience helping</p>
+        </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -200,7 +202,7 @@
       </div>
     </div>
   </div>
-  <footer>&copy 2018 OpenFarm 2018. All Rights Reserved</footer>
+  <footer class="text-center">&copy 2018 OpenFarm 2018. All Rights Reserved</footer>
 </body>
 
 </html>
