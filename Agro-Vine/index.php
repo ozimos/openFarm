@@ -23,7 +23,7 @@
         <br> +23407034696973
       </div>
       <div class="col-md-3">
-        <button class="btn btn-success">Logout</button>
+        <button class="btn bg-primary text-uppercase">Register/Login</button>
       </div>
     </div>
   </div>
@@ -34,8 +34,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse bg-primary" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto text-uppercase">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home
             <span class="sr-only">(current)</span>

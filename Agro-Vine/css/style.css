@@ -16,11 +16,10 @@ body{
 #view li{
     display: inline;
     padding-right: 10px;
-    
+
 }
 
 .active{
-    color: lightgreen;
     font-weight:500;
     font-size: 18px;
 }
@@ -31,7 +30,4 @@ body{
 }
 #view1 li{
     display: inline;
-}
-.active a{
-    background: lightgreen;
 }
