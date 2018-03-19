@@ -8,3 +8,31 @@ body{
     padding: 0;
     margin: 0;
 }
+
+#view ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+#view li{
+    display: inline;
+    padding-right: 10px;
+    
+}
+
+.active{
+    color: lightgreen;
+    font-weight:500;
+    font-size: 18px;
+}
+
+#view1 ul{
+    padding: 0;
+    list-style-type: none;
+}
+#view1 li{
+    display: inline;
+}
+.active a{
+    background: lightgreen;
+}
