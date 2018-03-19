@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
-    
+
 <body>
     <div class="container">
         <div class="row">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -60,9 +60,28 @@
     </form>
   </div>
 </nav>
-    
-    
-    
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <img style="height: 12rem;" src="img/serious.jpg" alt="Card image cap">
+  </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <img style="height: 12rem;" src="img/serious.jpg" alt="Card image cap">
+  </div>
+    </div>
+  </div>
+</div>
+<footer>&copy 2018 OpenFarm 2018. All Rights Reserved</footer>
 </body>
-    
+
 </html>
