@@ -60,8 +60,8 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-4" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
   </nav>
@@ -77,8 +77,12 @@
           <div id="subheader" class="row">
             <div class="col-md-5">
               <div class="form-group has-feedback has-search">
-                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                <input type="text" class="form-control" placeholder="Search for a farmer or produce">
+
+                <input type="text" class="form-control" placeholder="Search for a farmer or farm produce">
+                <span class="glyphicon glyphicon-search form-control-feedback"><i class="fas fa-search"></i></span>
+                <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
               </div>
             </div>
             <div class="col-md-3" id="view">
