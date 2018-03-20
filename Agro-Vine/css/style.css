@@ -31,8 +31,15 @@ body{
 #view1 li{
     display: inline;
 }
-#profileEditor{
+#profileEditor, .imgbox{
     display: flex;
+}
+#profileEditor>h4{
+    align-self: center;
+}
+.imgbox{
+    align-items: center;
+    padding: 20px 0px;
 }
 #subheader ul{
     display: flex;
