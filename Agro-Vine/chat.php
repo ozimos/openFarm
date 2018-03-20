@@ -74,16 +74,16 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <div class="weather-wrapper hide">
-          <img src="" class="weather-icon" alt="Weather Icon" />
+        <div class="weather-wrapper">
+          <img width="100px" src="" class="weather-icon" alt="Weather Icon" />
           <span class="weather-temperature"></span>
-          <button id="conversion" type="button"> &degC </button>
+          <button class="btn-outline-white" id="conversion" type="button"> &degC </button>
           <p>
             <strong>Place</strong>
             <br />
             <span class="weather-place"></span>
           </p>
-          <button onclick="getLocation();">Load weather</button>
+          <button onclick="getLocation();">Reload weather</button>
           <p>
             <strong>Description</strong>
             <br /> the weather for today is
@@ -97,11 +97,11 @@
               <strong>Temperature&degC</strong>
             </div>
             <div class="row">
-              <div class="col">High
+              <div class="col">HIGH
                 <span class="weather-max-temperature"></span>
               </div>
               <div class="col">
-                Low
+                LOW
                 <span class="weather-min-temperature"></span>
 
               </div>
@@ -111,7 +111,7 @@
 
           <p>
             <strong>Humidity</strong>
-            <br />
+            <br /> Rising
             <span class="weather-humidity"></span>
           </p>
 
@@ -123,13 +123,12 @@
             <div class="row">
 
               <div class="col">
-                High
-                <span class="weather-pressure"></span>
+                HIGH
+                <span class="weather-pressure2"></span>
               </div>
 
-              <div class="col">
-                Current
-                <span class=""></span>
+              <div class="col">CURRENT
+                <span class="weather-pressure"></span>
               </div>
             </div>
           </div>
@@ -140,41 +139,42 @@
             </div>
             <div class="row">
 
-              <div class="col">
-                High
-                <span class="weather-rain"></span>
+              <div class="col">CUMUL
+                <span class="weather-rain2">0</span>
               </div>
 
-              <div class="col">
-                Current
-                <span class=""></span>
+              <div class="col">CURRENT
+                <span class="weather-rain">0</span>
               </div>
             </div>
           </div>
 
           <div class="container">
             <div class="row">
-            <strong>Wind speed</strong>
+              <strong>Wind speed</strong>
 
             </div>
             <div class="row">
 
-              <div class="col">
-                High
+              <div class="col">AVG
                 <span class="weather-wind"></span>
               </div>
 
-              <div class="col">
-                Gust
-                <span class=""></span>
+              <div class="col">GUST
+                <span class="weather-wind"></span>
               </div>
             </div>
             <div class="row">
-              <div class="col"></div>
               <div class="col">
-                  <span class="wind-direction"></span>
+                <span class="weather-wind"></span> mph
               </div>
-              <div class="col"></div>
+              <div class="col">
+                <span class="wind-direction"></span>&deg
+              </div>
+              <div class="col">
+                <span class="wind-direction2"></span>
+
+              </div>
             </div>
           </div>
 
@@ -235,14 +235,21 @@
               </div>
 
             </div>
+
             <div class="col-md-4">
-              <div id="profileEditor" class="collapse">
-                <h4 style="display: inline-block;">Edit My Profile </h4>
-                <a class="btn ml-auto" type="button" data-toggle="collapse" href="#profileEditor" aria-expanded="false" aria-controls="profileEditor">
+
+                <div id="collapse">
+                <a class="bg-light ml-auto" type="button" data-toggle="collapse" href="#profileEditor" aria-expanded="false" aria-controls="profileEditor">
                   X
                 </a>
-              </div>
+                </div>
+                <div id="profileEditor" class="collapse">
 
+              <h4 class="text-center">Edit My Profile </h4>
+
+              <div class="imgbox">
+                <img width="50%" class="img-fluid mx-auto" src="img/mug.jpg" alt="thumbnail">
+              </div>
               <form>
                 <div class="form-group">
 
@@ -272,6 +279,8 @@
 
                 <button type="submit" class="btn btn-primary">Save</button>
               </form>
+                </div>
+
             </div>
           </div>
         </div>
