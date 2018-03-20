@@ -2,12 +2,12 @@
 let temperatureCelsius = 0;
 let temperatureFahrenheit = 0;
 function convertTemperature() {
-  if ($("#conversion").html() === "°F") {
-    $("#conversion").html("&degC");
-    $(".weather-temperature").html(temperatureCelsius);
+  if ($("#conversion").html() === "F") {
+    $("#conversion").html("C");
+    $(".weather-temperature").html(temperatureCelsius + '°');
   } else {
-    $("#conversion").html("&degF");
-    $(".weather-temperature").html(temperatureFahrenheit);
+    $("#conversion").html("F");
+    $(".weather-temperature").html(temperatureFahrenheit + '°');
   }
 }
 
@@ -27,8 +27,6 @@ function getLocation() {
       dataType: "json",
       success: function(response) {
         $(".weather-icon").attr("src", response.weather[0].icon);
-        let locationName = response.name + "," + response.sys.country;
-        $(".weather-place").html(locationName);
         $(".weather-description ").html(response.weather[0].description);
         $(".weather-humidity ").html(response.main.humidity);
         const pressure = response.main.pressure * 0.02953;
@@ -84,7 +82,7 @@ function getLocation() {
 
         temperatureCelsius = Math.round(response.main.temp * 10) / 10;
         temperatureFahrenheit = Math.round(temperatureCelsius * 18 + 320) / 10;
-        $(".weather-temperature").text(temperatureCelsius);
+        $(".weather-temperature").text(temperatureCelsius + '°');
         $("#conversion").click(convertTemperature);
       }
     });
