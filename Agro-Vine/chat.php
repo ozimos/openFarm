@@ -10,6 +10,22 @@
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.userchat.io/userchat.css">
+<script src="https://cdn.userchat.io/userchat.js"></script>
+<script>
+  window.userChatConfig = {
+    key: 'b1317f0f-2ebe-4ac6-8359-3c5f45a87f3c'
+  };
+
+  var userChat = require('user-chat-sdk').default;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    userChat.box.create('#demo-chat', {
+      id: 'demo.chat',
+      name: 'Demo Chat'
+    });
+  });
+</script>
 </head>
 
 <body>
@@ -27,7 +43,7 @@
         <br> +23407034696973
       </div>
       <div class="col-md-3">
-        <button class="btn bg-primary text-uppercase">Register/Login</button>
+        <button class="btn bg-primary text-uppercase">Logout</button>
       </div>
     </div>
   </div>
@@ -313,6 +329,7 @@
     crossorigin="anonymous"></script>
   <script src="js/openWeather.js"></script>
   <script src="js/openFarm2.js"></script>
+
 </body>
 
 </html>
