@@ -6,8 +6,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -59,31 +61,137 @@
           <a class="nav-link" href="#">Storage Facilities</a>
         </li>
       </ul>
-      <div class="input-group ">
+      <div class="input-group" id="search1">
         <input class="form-control" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
-
         <div class="input-group-append">
-    <span class="input-group-text btn btn-outline-light" id="basic-addon2"><i class="fas fa-search"></i></span>
-  </div>
+          <button class="btn btn-outline-light" id="basic-addon2">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2">
-        <?php $date = date('D-M-Y');
-                    echo date('D'.' '.'M'.' '.'Y');
-                ?>
+      <div class="col-md-3">
+        <div class="weather-wrapper hide">
+          <img src="" class="weather-icon" alt="Weather Icon" />
+          <span class="weather-temperature"></span>
+          <button id="conversion" type="button"> &degC </button>
+          <p>
+            <strong>Place</strong>
+            <br />
+            <span class="weather-place"></span>
+          </p>
+          <button onclick="getLocation();">Load weather</button>
+          <p>
+            <strong>Description</strong>
+            <br /> the weather for today is
+            <span class="weather-description"></span>. See recommended best farm practices for different crops today.
+            <a href="">Read More</a>
+          </p>
+
+
+          <div class="container">
+            <div class="row">
+              <strong>Temperature&degC</strong>
+            </div>
+            <div class="row">
+              <div class="col">High
+                <span class="weather-max-temperature"></span>
+              </div>
+              <div class="col">
+                Low
+                <span class="weather-min-temperature"></span>
+
+              </div>
+            </div>
+          </div>
+
+
+          <p>
+            <strong>Humidity</strong>
+            <br />
+            <span class="weather-humidity"></span>
+          </p>
+
+          <div class="container">
+            <div class="row"></div>
+            <div class="row">
+              <strong>Pressure</strong>
+            </div>
+            <div class="row">
+
+              <div class="col">
+                High
+                <span class="weather-pressure"></span>
+              </div>
+
+              <div class="col">
+                Current
+                <span class=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <strong>Rainfall</strong>
+
+            </div>
+            <div class="row">
+
+              <div class="col">
+                High
+                <span class="weather-rain"></span>
+              </div>
+
+              <div class="col">
+                Current
+                <span class=""></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+            <strong>Wind speed</strong>
+
+            </div>
+            <div class="row">
+
+              <div class="col">
+                High
+                <span class="weather-wind"></span>
+              </div>
+
+              <div class="col">
+                Gust
+                <span class=""></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"></div>
+              <div class="col">
+                  <span class="wind-direction"></span>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <div class="container">
           <div id="subheader" class="row">
             <div class="col-md-5">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for a farmer or farm produce">
                 <div class="input-group-append">
-    <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
-  </div>
+                  <button class="btn btn-outline-secondary" id="basic-addon2">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="col-md-3" id="view">
@@ -130,13 +238,12 @@
             <div class="col-md-4">
               <div id="profileEditor" class="collapse">
                 <h4 style="display: inline-block;">Edit My Profile </h4>
-                <a class="btn ml-auto" type="button" data-toggle="collapse" href="#profileEditor"
-                  aria-expanded="false" aria-controls="profileEditor">
+                <a class="btn ml-auto" type="button" data-toggle="collapse" href="#profileEditor" aria-expanded="false" aria-controls="profileEditor">
                   X
-              </a>
+                </a>
               </div>
 
-              <form   >
+              <form>
                 <div class="form-group">
 
                   <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="First Name">
@@ -188,12 +295,15 @@
 
 
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
+  <script src="js/openWeather.js"></script>
+  <script src="js/openFarm2.js"></script>
 </body>
 
 </html>

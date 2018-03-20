@@ -59,10 +59,12 @@
           <a class="nav-link" href="#">Storage Facilities</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-4" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-      </form>
+      <div class="input-group" id="search1">
+        <input class="form-control" type="search" placeholder="Search for a produce/ farmer" aria-label="Search">
+        <div class="input-group-append">
+    <button class="btn btn-outline-light" id="basic-addon2"><i class="fas fa-search"></i></button>
+  </div>
+      </div>
     </div>
   </nav>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
