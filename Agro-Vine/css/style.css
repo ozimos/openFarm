@@ -1,57 +1,62 @@
-body{
+body {
     margin-top: 20px;
 }
 
-#logo{
+#logo {
     width: 200px;
     padding: 0;
     margin: 0;
 }
 
-#view ul{
+#view ul {
     padding: 0;
     list-style-type: none;
 }
 
-#view li{
+#view li {
     display: inline;
     padding-right: 10px;
-
 }
 
-.active{
-    font-weight:500;
+.active {
+    font-weight: 500;
     font-size: 18px;
 }
 
-#view1 ul{
+#view1 ul {
     padding: 0;
     list-style-type: none;
 }
-#view1 li{
+
+#view1 li {
     display: inline;
 }
-#profileEditor, .imgbox{
+
+.imgbox,
+#collapse {
     display: flex;
+    border: none;
 }
-#profileEditor>h4{
-    align-self: center;
-}
-.imgbox{
+
+.imgbox {
     align-items: center;
     padding: 20px 0px;
 }
-#subheader ul{
+
+#subheader ul {
     display: flex;
     justify-content: space-between;
 }
-a{
+
+a {
     min-width: 3em;
     text-align: center;
 }
+
 .btn-outline-white {
     border: none;
 }
-#search1{
+
+#search1 {
     width: 300px;
 }

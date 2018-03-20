@@ -2,12 +2,12 @@
 let temperatureCelsius = 0;
 let temperatureFahrenheit = 0;
 function convertTemperature() {
-  if ($("button").html() === "°F") {
-    $("button").html("&degC");
-    $("#temp").html(temperatureCelsius);
+  if ($("#conversion").html() === "°F") {
+    $("#conversion").html("&degC");
+    $(".weather-temperature").html(temperatureCelsius);
   } else {
-    $("button").html("&degF");
-    $("#temp").html(temperatureFahrenheit);
+    $("#conversion").html("&degF");
+    $(".weather-temperature").html(temperatureFahrenheit);
   }
 }
 

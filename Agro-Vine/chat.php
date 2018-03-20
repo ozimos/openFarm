@@ -74,10 +74,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <div class="weather-wrapper hide">
-          <img src="" class="weather-icon" alt="Weather Icon" />
+        <div class="weather-wrapper">
+          <img width="100px" src="" class="weather-icon" alt="Weather Icon" />
           <span class="weather-temperature"></span>
-          <button id="conversion" type="button"> &degC </button>
+          <button class="btn-outline-white" id="conversion" type="button"> &degC </button>
           <p>
             <strong>Place</strong>
             <br />
@@ -235,61 +235,18 @@
               </div>
 
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit My Profile</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="imgbox">
-                      <img width="50%" class="img-fluid mx-auto" src="img/mug.jpg" alt="thumbnail">
-                    </div>
-                    <form>
-                      <div class="form-group">
 
-                        <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="First Name">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="middleName" aria-describedby="middleName" placeholder="Middle Name">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Last Name">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="gender" aria-describedby="gender" placeholder="Gender">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Address/Location">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="State">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Phone">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Farm Produce">
-                      </div>
-
-                      <button type="submit" class="btn btn-primary">Save</button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- existing profile -->
             <div class="col-md-4">
-              <div id="profileEditor" class="collapse">
-                <h5 class=" ml-2" style="display: inline-block;">My Profile </h5>
-              </div>
+
+                <div id="collapse">
+                <a class="bg-light ml-auto" type="button" data-toggle="collapse" href="#profileEditor" aria-expanded="false" aria-controls="profileEditor">
+                  X
+                </a>
+                </div>
+                <div id="profileEditor" class="collapse">
+
+              <h4 class="text-center">Edit My Profile </h4>
+
               <div class="imgbox">
                 <img width="50%" class="img-fluid mx-auto" src="img/mug.jpg" alt="thumbnail">
               </div>
@@ -322,6 +279,8 @@
 
                 <button type="submit" class="btn btn-primary">Save</button>
               </form>
+                </div>
+
             </div>
           </div>
         </div>
