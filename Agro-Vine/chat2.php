@@ -10,22 +10,7 @@
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.userchat.io/userchat.css">
-<script src="https://cdn.userchat.io/userchat.js"></script>
-<script>
-  window.userChatConfig = {
-    key: 'b1317f0f-2ebe-4ac6-8359-3c5f45a87f3c'
-  };
 
-  var userChat = require('user-chat-sdk').default;
-
-  document.addEventListener("DOMContentLoaded", function() {
-    userChat.box.create('#demo-chat', {
-      id: 'demo.chat',
-      name: 'Demo Chat'
-    });
-  });
-</script>
 </head>
 
 <body>
@@ -91,14 +76,9 @@
     <div class="row">
       <div class="col-md-3">
         <div class="weather-wrapper">
-          <img width="100px" src="" class="weather-icon" alt="Weather Icon" />
+          <img width="80px" src="" class="weather-icon" alt="Weather Icon" />
           <span class="weather-temperature"></span>
-          <button class="btn-outline-white" id="conversion" type="button"> &degC </button>
-          <p>
-            <strong>Place</strong>
-            <br />
-            <span class="weather-place"></span>
-          </p>
+          <button class="btn-outline-white" id="conversion" type="button"> C </button> <br />
           <button onclick="getLocation();">Reload weather</button>
           <p>
             <strong>Description</strong>
@@ -254,47 +234,13 @@
 
             <div id="left_aside" class="col-md-5">
 
-                <div id="collapse">
-                <a class="bg-light ml-auto" type="button" data-toggle="collapse" href="#profileEditor" aria-expanded="false" aria-controls="profileEditor">
-                  X
-                </a>
-                </div>
-                <div id="profileEditor" class="collapse">
-
-              <h4 class="text-center">Edit My Profile </h4>
-
-              <div class="imgbox">
+                <div id="cardId">
+                <div class="imgbox">
                 <img width="50%" class="img-fluid mx-auto" src="img/mug.jpg" alt="thumbnail">
               </div>
-              <form>
-                <div class="form-group">
+                </div>
+                <div id="demo-chat">
 
-                  <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="First Name">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="middleName" aria-describedby="middleName" placeholder="Middle Name">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="gender" aria-describedby="gender" placeholder="Gender">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Address/Location">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="State">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Phone">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Farm Produce">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Save</button>
-              </form>
                 </div>
 
             </div>
@@ -329,7 +275,39 @@
     crossorigin="anonymous"></script>
   <script src="js/openWeather.js"></script>
   <script src="js/openFarm2.js"></script>
+  <script>
+(function(t,a,l,k,j,s){
+s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.getElementsByTagName('head')[0].appendChild(s);k=t.Promise;
+t.Talk={ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l.push([f])},catch:function(){return k&&new k()},c:l}};
+})(window,document,[]);
+</script>
+<div id="talkjs-container" style="width: calc(100% - 60px); margin: 30px; min-height: 150px"></div>
+<script>
+Talk.ready.then(function() {
+    var me = new Talk.User({
+        id: "12345",
+        name: "George Looney",
+        email: "george@looney.net",
+        photoUrl: "https://talkjs.com/docs/img/george.jpg",
+        welcomeMessage: "Hey there! How are you? :-)"
+    });
+    window.talkSession = new Talk.Session({
+        appId: "twwJvmYz",
+        me: me
+    });
+    var other = new Talk.User({
+        id: "54321",
+        name: "Ronald Raygun",
+        email: "ronald@teflon.com",
+        photoUrl: "https://talkjs.com/docs/img/ronald.jpg",
+        welcomeMessage: "Hey, how can I help?"
+    });
 
+    var conversation = talkSession.getOrStartConversation(other);
+    var inbox = talkSession.createInbox({selected: conversation});
+    inbox.mount(document.getElementById("demo-chat"));
+});
+</script>
 </body>
 
 </html>
