@@ -78,7 +78,8 @@
         <div class="weather-wrapper">
           <img width="80px" src="" class="weather-icon" alt="Weather Icon" />
           <span class="weather-temperature"></span>
-          <button class="btn-outline-white" id="conversion" type="button"> C </button> <br />
+          <button class="btn-outline-white" id="conversion" type="button"> C </button>
+          <br />
           <button onclick="getLocation();">Reload weather</button>
           <p>
             <strong>Description</strong>
@@ -234,14 +235,14 @@
 
             <div id="left_aside" class="col-md-5">
 
-                <div id="cardId">
+              <div id="cardId">
                 <div class="imgbox">
-                <img width="50%" class="img-fluid mx-auto" src="img/mug.jpg" alt="thumbnail">
+                  <img width="50%" class="img-fluid mx-auto" src="img/mug.jpg" alt="thumbnail">
+                </div>
               </div>
-                </div>
-                <div id="demo-chat">
+              <div id="demo-chat">
 
-                </div>
+              </div>
 
             </div>
           </div>
@@ -276,38 +277,57 @@
   <script src="js/openWeather.js"></script>
   <script src="js/openFarm2.js"></script>
   <script>
-(function(t,a,l,k,j,s){
-s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.getElementsByTagName('head')[0].appendChild(s);k=t.Promise;
-t.Talk={ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l.push([f])},catch:function(){return k&&new k()},c:l}};
-})(window,document,[]);
-</script>
-<div id="talkjs-container" style="width: calc(100% - 60px); margin: 30px; min-height: 150px"></div>
-<script>
-Talk.ready.then(function() {
-    var me = new Talk.User({
+    (function (t, a, l, k, j, s) {
+      s = a.createElement('script');
+      s.async = 1;
+      s.src = "https://cdn.talkjs.com/talk.js";
+      a.getElementsByTagName('head')[0].appendChild(s);
+      k = t.Promise;
+      t.Talk = {
+        ready: {
+          then: function (f) {
+            if (k) return new k(function (r, e) {
+              l.push([f, r, e])
+            });
+            l.push([f])
+          },
+          catch: function () {
+            return k && new k()
+          },
+          c: l
+        }
+      };
+    })(window, document, []);
+  </script>
+  <div id="talkjs-container" style="width: calc(100% - 60px); margin: 30px; min-height: 150px"></div>
+  <script>
+    Talk.ready.then(function () {
+      var me = new Talk.User({
         id: "12345",
         name: "George Looney",
         email: "george@looney.net",
         photoUrl: "https://talkjs.com/docs/img/george.jpg",
         welcomeMessage: "Hey there! How are you? :-)"
-    });
-    window.talkSession = new Talk.Session({
+      });
+      window.talkSession = new Talk.Session({
         appId: "twwJvmYz",
         me: me
-    });
-    var other = new Talk.User({
+      });
+      var other = new Talk.User({
         id: "54321",
         name: "Ronald Raygun",
         email: "ronald@teflon.com",
         photoUrl: "https://talkjs.com/docs/img/ronald.jpg",
         welcomeMessage: "Hey, how can I help?"
-    });
+      });
 
-    var conversation = talkSession.getOrStartConversation(other);
-    var inbox = talkSession.createInbox({selected: conversation});
-    inbox.mount(document.getElementById("demo-chat"));
-});
-</script>
+      var conversation = talkSession.getOrStartConversation(other);
+      var inbox = talkSession.createInbox({
+        selected: conversation
+      });
+      inbox.mount(document.getElementById("demo-chat"));
+    });
+  </script>
 </body>
 
 </html>
