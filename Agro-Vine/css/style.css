@@ -74,6 +74,9 @@ a {
     min-height: 100px;
 
 }
-.weather-temperature{
+.weather-temperature, #conversion{
     font-size: 3em;
+}
+.weather-wrapper{
+    background-color: lightgrey;
 }
