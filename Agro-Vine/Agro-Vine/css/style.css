@@ -1,0 +1,79 @@
+body {
+    margin-top: 20px;
+}
+
+#logo {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+#view ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#view li {
+    display: inline;
+    padding-right: 10px;
+}
+
+.active {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#view1 ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#view1 li {
+    display: inline;
+}
+
+.imgbox,
+#collapse {
+    display: flex;
+    border: none;
+}
+
+.imgbox {
+    align-items: center;
+    padding: 20px 0px;
+}
+
+#subheader ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    min-width: 3em;
+    text-align: center;
+}
+
+.btn-outline-white {
+    border: none;
+}
+
+#search1 {
+    width: 300px;
+}
+#left_aside, #center_section {
+    border-top: solid gray;
+    border-bottom: solid gray;
+    border-right: solid gray;
+}
+#left_aside{
+    padding: 0;
+}
+ #cardId {
+    border-bottom: solid gray;
+    margin: 0;
+    min-height: 100px;
+
+}
+.weather-temperature{
+    font-size: 3em;
+}
